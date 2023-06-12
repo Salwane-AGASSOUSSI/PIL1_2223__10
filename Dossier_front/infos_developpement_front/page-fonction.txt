@@ -21,3 +21,16 @@ Gestion des salles de classe : Cette page permettra aux administrateurs de gére
 Notifications et communication : Cette fonctionnalité permettra aux administrateurs d'envoyer des notifications
 et des messages aux utilisateurs, tels que des rappels de cours, des changements d'emploi du temps, 
 des annonces importantes, etc.
+
+EXPLICATION FONCTIONNEMENT PREMIÈRE PAGE:
+En-tête : Un en-tête contenant le nom de l'application ou du tableau de bord, éventuellement avec un logo ou une icône.
+
+Menu de navigation : Un menu de navigation permettant aux administrateurs de passer facilement d'une section à une autre de l'application. Cela peut inclure des liens vers d'autres pages importantes telles que la gestion des emplois du temps, la gestion des utilisateurs, etc.
+
+Vue d'ensemble : Une section d'aperçu qui affiche les informations clés, telles que le nombre total de cours, le nombre d'étudiants, les cours à venir, etc. Vous pouvez utiliser des cartes, des statistiques ou des graphiques pour présenter ces données de manière visuellement attrayante.
+
+Calendrier ou planning : Une section affichant le calendrier ou le planning des emplois du temps. Vous pouvez utiliser un calendrier interactif ou une grille pour représenter les différents horaires et les cours planifiés. Assurez-vous de permettre la navigation dans le temps, la recherche ou le filtrage pour faciliter l'accès aux informations.
+
+Widgets ou indicateurs : Des widgets ou des indicateurs affichant des informations spécifiques, tels que les cours à venir, les cours annulés, les conflits d'horaires, etc. Ces éléments peuvent aider les administrateurs à repérer rapidement les problèmes ou les informations importantes.
+
+Sections personnalisées : En fonction des besoins de votre projet, vous pouvez inclure des sections supplémentaires pour afficher des données spécifiques. Par exemple, une section pour les événements à venir, une section pour les annonces importantes, etc.
