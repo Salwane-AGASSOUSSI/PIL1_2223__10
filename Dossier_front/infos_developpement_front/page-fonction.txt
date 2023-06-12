@@ -1,0 +1,23 @@
+Tableau de bord : Cette page peut fournir un aperçu global des emplois du temps,
+ y compris les informations clés telles que les cours, les horaires,
+ les salles de classe, etc. Vous pouvez afficher des statistiques et des graphiques
+ pour aider les administrateurs à visualiser les données.
+
+Gestion des emplois du temps : Cette page permettra aux administrateurs de créer,
+ modifier et supprimer les emplois du temps. Ils pourront saisir les détails des cours,
+ les horaires, les enseignants responsables, les salles de classe, etc.
+ Il peut également inclure des fonctionnalités telles que la planification
+ automatique des emplois du temps ou la validation des conflits d'horaires.
+
+Gestion des utilisateurs : Cette page permettra aux administrateurs de gérer les utilisateurs de l'application,
+ y compris les étudiants, les enseignants et autres membres du personnel.
+ Ils pourront ajouter de nouveaux utilisateurs, gérer les autorisations d'accès,
+ réinitialiser les mots de passe, etc.
+
+Gestion des salles de classe : Cette page permettra aux administrateurs de gérer les salles de classe disponibles.
+ Ils pourront ajouter de nouvelles salles, attribuer des équipements spécifiques aux salles,
+ vérifier la disponibilité des salles, etc.
+
+Notifications et communication : Cette fonctionnalité permettra aux administrateurs d'envoyer des notifications
+et des messages aux utilisateurs, tels que des rappels de cours, des changements d'emploi du temps, 
+des annonces importantes, etc.
