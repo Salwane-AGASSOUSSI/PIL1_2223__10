@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+    
+        }
+    </style>
+    <title>Logup</title>
+</head>
+<body>
+    <div class="login-bo">
+       <form action="Produit.html">
+        <div class="login-header">
+            <header class="po">Register</header>
+        </div>
+        <div class="input-bo">
+            <input type="text" class="input-field" placeholder="Surname" autocomplete="off" required>
+        </div>
+        <div class="input-bo">
+            <input type="text" class="input-field" placeholder="Name" autocomplete="off" required>
+        </div>
+        <div class="input-bo">
+            <input type="text" class="input-field" placeholder="Day/Month/Year " autocomplete="off" required>
+        </div>
+        <div class="input-bo">
+            <input type="text" class="input-field" placeholder="E-mail" autocomplete="off" required>
+        </div>
+        <div class="input-bo">
+            <input type="password" class="input-field" placeholder="Password" autocomplete="off" required>
+        </div>
+        <div class="forgot">
+            <section>
+                <input type="checkbox" id="check">
+                <label for="check">Male</label>
+                <input type="checkbox" id="check">
+                <label for="check"> female</label>
+                <input type="checkbox" id="check">
+                <label for="check">Other </label>
+            </section>
+        </div>    
+        <div class="input-submit">
+            <button class="submit-btn" id="submit"></button>
+            <label for="submit" ><a  class="ok" href="Produits.html"> Sign Up </a></label>
+        </div>
+        <div class="sign-up-link">
+            <p class="po">Already have an account <a href="login.html">Sign In</a></p>
+        </div>
+       </form>
+    </div>
+</body>
+</html>

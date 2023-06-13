@@ -1,0 +1,410 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    height: 5vh;
+    width: 100%;
+    background-image: url(besoin-materiel-informatique.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+/* style navbar*/
+nav {
+    width: 100%;
+    background-color: #2a375e;
+    height: 75px;
+    line-height: 75px;
+    padding: 0px 120px;
+}
+
+nav h1 {
+    font-size: 30px;
+    font-family: sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+}
+
+
+nav ul li a{
+   text-decoration: none;
+   font-family: sans-serif;
+   color: #fff;
+   font-size: 17px;
+   padding: 0px 16px;
+   display: block;
+}
+nav ul li a:hover{
+    background-color: #46527a;
+} 
+.search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #2f3640;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+@import url();
+/* style login and register*/
+/* style login div*/
+.login-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 480px;
+    padding: 30px;
+    border: 1px solid #fff;
+    width: 400px;
+    height: 430px;
+    border-radius: 70px;
+    transform: translate(-50,-50);
+    background: rgba(0,0,0,0.7);
+    
+}
+/*.login-box:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.05);
+    z-index: -1;
+
+}*/
+/* style register div*/
+.login-bo
+{
+    border: 1px solid #fff;
+    width: 500px;
+    height: 700px;
+    border-radius: 70px;
+    padding: 40px;
+    transform: translate(-50,-50);
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+}
+.login-header{
+    text-align: center;
+    margin: 0px 0 10px 0;
+    font-size: 30px;
+    font-weight: 600;
+}
+.input-bo .input-field{
+    width: 400px;
+    height: 45px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+    outline: none;
+    transition: .3s;
+    padding: 20px;
+}
+.input-box .input-field{
+    width: 300px;
+    height: 45px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.05);
+    outline: none;
+    transition: .3s;
+    padding: 20px;
+   
+}
+.login-bo input{
+    width: 200px;
+    text-align: center;
+} 
+
+::placeholder{
+    font-weight: 500;
+    color: #222;
+
+}
+.input-field:focus{
+    width: 105%;
+}
+.forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+section{
+    display: flex;
+    align-items:center;
+    font-size: 14px;
+    color: #fcfafa;
+    padding-left: 10px;
+
+}
+section label{
+    padding-right: 10px;
+}
+#check{
+    margin-right: 5px;
+    
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+section a{
+    color: beige;
+}
+.input-submit{
+    position: relative;
+}
+.submit-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.input-submit label{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #fff;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+.input-submit label .ok{
+    color: #fff;
+}
+ .submit-btn:hover{
+    background: #000;
+    transform: scale(1.05,1);
+ }
+ .sign-up-link{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+ }
+ .sign-up-link a{
+    color: #fff;
+    font-weight: 600;
+ }
+ /*style button quitter head login and head register*/
+ .po{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+ }
+
+ input[type=search]
+ {
+    width: 20%;
+    position: relative;
+    left: 1130px;
+
+ }
+ button[type=submit]
+ {
+     position: relative;
+     left: 1120px;
+     background-color: blue;
+     color: white;
+ }
+ form[role=search]
+ {
+   position: relative;
+ }
+ 
+ /*style produit*/
+ .titre
+ {
+   text-align: center;
+   color: #010101;
+ }
+
+.produit 
+{
+ width: 200px;
+ margin: 20px;
+ padding: 10px;
+ border: 1px solid #ccc;
+ text-align: center;
+ float: left;
+}
+
+.produit img 
+{
+ width: 150px;
+ height: 150px;
+ margin-bottom: 10px;
+}
+
+.produit h2 
+{
+ font-size: 18px;
+}
+
+.produit p 
+{
+ font-size: 14px;  
+}
+
+.btn{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: transparent;
+    border: 2px solid #000;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+.btn-primary{
+    background: black;
+    color: white;
+}
+/* style footer acceuil*/
+.footer{
+    margin-top: 700px;
+    width: 100%;
+    padding: 100px 15%;
+    background: #333;
+    color: #efefef;
+    display: flex;
+}
+.footer div{
+    text-align: center;
+}
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+form input{
+    width: 250px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    outline: none;
+    border: none;
+}
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+/* style produits*/
+
+.cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cards{
+    width: 300px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.card-img img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-body{
+    text-align: center;
+    
+    
+}
+.card-body p{
+    text-align: justify;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card-footer button{
+    width: 150px;
+    background: black;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid;
+    padding: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+.card-footer button:hover{
+    background-color: white;
+    color: #000;
+    border-radius: 2px solid black;
+}
+.cards:hover{
+    box-shadow: 3.9px 7.8px 7.8px hsl(0deg 0% 0% / 0.38);
+
+}
+input[type=checkbox]{
+    width: 20px;
+    padding-left: 10%;
+}
