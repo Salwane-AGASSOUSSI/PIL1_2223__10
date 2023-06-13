@@ -22,15 +22,90 @@ Notifications et communication : Cette fonctionnalité permettra aux administrat
 et des messages aux utilisateurs, tels que des rappels de cours, des changements d'emploi du temps, 
 des annonces importantes, etc.
 
-EXPLICATION FONCTIONNEMENT PREMIÈRE PAGE:
-En-tête : Un en-tête contenant le nom de l'application ou du tableau de bord, éventuellement avec un logo ou une icône.
 
-Menu de navigation : Un menu de navigation permettant aux administrateurs de passer facilement d'une section à une autre de l'application. Cela peut inclure des liens vers d'autres pages importantes telles que la gestion des emplois du temps, la gestion des utilisateurs, etc.
+Page d'accueil de l'administrateur:
+En-tête
+  [Logo] [Nom de l'application]                     
 
-Vue d'ensemble : Une section d'aperçu qui affiche les informations clés, telles que le nombre total de cours, le nombre d'étudiants, les cours à venir, etc. Vous pouvez utiliser des cartes, des statistiques ou des graphiques pour présenter ces données de manière visuellement attrayante.
+Menu de navigation
+  [Accueil] [Gestion des emplois du temps] [Gestion des utilisateurs] [Autres pages]
 
-Calendrier ou planning : Une section affichant le calendrier ou le planning des emplois du temps. Vous pouvez utiliser un calendrier interactif ou une grille pour représenter les différents horaires et les cours planifiés. Assurez-vous de permettre la navigation dans le temps, la recherche ou le filtrage pour faciliter l'accès aux informations.
+Vue d'ensemble  [Statistiques]
+  [Graphiques]
+  [Informations clés]
 
-Widgets ou indicateurs : Des widgets ou des indicateurs affichant des informations spécifiques, tels que les cours à venir, les cours annulés, les conflits d'horaires, etc. Ces éléments peuvent aider les administrateurs à repérer rapidement les problèmes ou les informations importantes.
+Calendrier ou planning
+  [Calendrier interactif]
+  [Navigation : Flèche gauche (←) / Flèche droite (→)]
+  [Recherche : Taper pour rechercher]
 
-Sections personnalisées : En fonction des besoins de votre projet, vous pouvez inclure des sections supplémentaires pour afficher des données spécifiques. Par exemple, une section pour les événements à venir, une section pour les annonces importantes, etc.
+Widgets ou indicateurs
+  [Cours à venir]         [Cours annulés]          [Conflits d'horaires]
+
+Sections personnalisées
+  [Section 1]
+  [Section 2]
+  [Section 3]
+  ...
+
+
+PAGE Gestion emploi du temps:
+
+En-tête
+  [Logo] [Nom de l'application]                     
+
+Menu de navigation
+  [Accueil] [Gestion des emplois du temps] [Gestion des utilisateurs] [Autres pages]
+
+Contenu de la page de gestion des emplois du temps
+  [Calendrier interactif]
+  [Liste des cours]
+  [Filtres ou options de recherche]
+  [Actions pour ajouter, modifier ou supprimer des cours]
+  [Section personnalisée 1]
+  [Section personnalisée 2]
+  ...
+
+PAGE de gestion des utilisateurs:
+
+En-tête
+  [Logo] [Nom de l'application]                     
+
+Menu de navigation
+  [Accueil] [Gestion des emplois du temps] [Gestion des utilisateurs] [Autres pages]
+
+Contenu de la page de gestion des utilisateurs
+  [Liste des utilisateurs]
+  [Filtres ou options de recherche]
+  [Actions pour ajouter, modifier ou supprimer des utilisateurs]
+  [Informations ou statistiques sur les utilisateurs]
+  [Section personnalisée 1]
+  [Section personnalisée 2]
+  ...
+Page de publication de message et d'infos:
+
+En-tête
+  [Logo] [Nom de l'application]                     
+
+Menu de navigation
+  [Accueil] [Gestion des emplois du temps] [Gestion des utilisateurs] [Autres pages]
+
+Contenu de la page de publication
+  [Zone de saisie de texte pour écrire une publication]
+  [Bouton "Publier" pour soumettre la publication]
+  [Liste des publications récentes]
+    - [Publication 1]
+    - [Publication 2]
+    - [Publication 3]
+    ...
+  [Filtres ou options de tri pour les publications]
+  [Actions pour modifier ou supprimer une publication]
+  [Section personnalisée 1]
+  [Section personnalisée 2]
+  ...
+
+
+
+
+
+
