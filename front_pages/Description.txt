@@ -1,0 +1,30 @@
+Il s'agit de mes propositions pour les pages du font-end. Vous pouvez y apporter vos modifications ou vos observations. Pour ma part, je pense que ce serait mmieux d'utiliser ce genre de pages pour pouvoir l'adapter à toutes les universités.J'ai mis des couleurs basiques pour favoriser la simplicité et pour faire en sorte que ce soit adapté à toutes les universités. De cette manière, lorsqu'on voudra l'utiliser pour une université quelconque, on mettra juste une image représentative de l'université en fond d'écran pour la page de connexion comme je l'ai mis pour IFRI par exemple.
+Description:
+j'ai réparti le dossier en trois sous-dossiers que sont:
+-administrateur
+-etudiants
+-professeurs
+
+Dans le sous-dossier administrateur, il y a:
+-Une page de connexion demandant, le nom d'utilisateur et le numéro matricule, le tout avec un fond d'écran d'une image représentative d'IFRI
+-Une page d'acceuil donnant un aperçu de l'emploi du temps de la semaine en cours, avec la possibilité de le modifier ou d'ajouter un nouvel emploi du temps ainsi qu'une barre de recherche pour rechercher les emplois du temps précédents
+-Une page de notification où vont appraître les messages de disponibilité des professeurs ou tout autres informations venant des professeurs.
+-Une page de création d'emploi du temps dans laquelle l'administrateur devra entrer les informations à l'aide d'une zone de texte et pourra avoir un aperçu du rendu avant de le publier.
+-Une page de modification de l'emploi du temps dans laquelle l'administrateur pourra modifier l'emploi du temps de la semaine en cours et voir le rendu avant de le publier.
+-Une page de rendu à l'aide de laquelle, l'administrateur pourra avoir un aperçu des modifications qu'il aurait apporté
+-Une page pour afficher la liste des emplois du temps précédents et une barre de recherche pour rechercher des emplois du temps spécifiques
+-Une page dans laquelle l'administration pourra saisir les informations à publier et les envoyer aux étudiants et/ou professeurs.
+
+Dans le sous-dossier etudiants, il y a:
+-Une page de connexion demandant, le nom d'utilisateur et le numéro matricule, le tout avec un fond d'écran d'une image représentative d'IFRI
+-Une page d'acceuil montrant l'/les emploi(s) du temps de la semaine en cours, la possibilité de télécharger cet emploi du temps en pdf ainsi qu'une barre de recherche offrant la possibilité de rechercher un emploi du temps précis
+-Une page de notifications pour recevoir les diverses informations provenant de l'administration
+-Une page pour afficher la liste des emplois du temps précédents et une barre de recherche pour rechercher des emplois du temps spécifiques
+
+Dans le sous-dossier professeurs, il y a:
+-Une page de connexion demandant, le nom d'utilisateur et le numéro matricule, le tout avec un fond d'écran d'une image représentative d'IFRI
+-Une page d'acceuil dont le contenu est réalisé de telle sorte à permettre à l'enseignant de renseigner sa disponiblité pour la semaine qui va suivre à l'administration ,de consulter l'emploi du temps de la semaine en cours et de recherher les emplois du temps des semaines précédentes.
+-Une page de notifications pour recevoir les diverses informations provenant de l'administration
+-Une page dans laquelle le professeur pourra saisir puis soumettre sa disponibilité à l'admnistration.
+
+Voilà un résumé de ce que j'ai réalisé pour le front-end, on pourra maintenant se concerter pour apporter des modifications pour que ce soit plus cohérent.

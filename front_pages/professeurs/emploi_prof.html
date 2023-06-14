@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page d'acceuil</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="">Gestion d'emploi du temps</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                   <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="acceuil_professeurs.html">Acceuil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="emploi_prof.html">Emploi du temps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="content_notif_profs.html">Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="disponibilité.html">Disponibilité</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="connexion.html">Déconnexion</a>
+                        </li>
+                     
+
+                    </ul>
+
+                   </div>
+
+                </div>
+
+            </nav>
+        </header>
+         
+        <section id="search" class="py-5">
+            <div class="container">
+                <h2 class="mb-3"> Rechercher un emploi du temps</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Entrez un cours, un enseignant ...">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                </form>
+            </div>
+           
+        </section>
+        <section id="timetables" class="bg-light py-5">
+            <div class="container">
+                <h2 class="mb-3">Emplois du temps</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Spécialité :</h3>
+                        <h3 class="card-title">Année de :</h3>
+                        <h3 class="card-title">Semaine du :</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Jour</th>
+                                    <th scope="col">Cours</th>
+                                    <th scope="col">Enseignant(s)</th>
+                                    <th scope="col">Salle</th>
+                                    <th scope="col">Créneau Horaire</th>
+                                    <th scope="col">Matériel nécessaire</th>
+                                    <th scope="col">Informations supplémentaires</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr></tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-primary">Télécharger le pdf</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="bg-dark text-white py-3">
+            <div class="container text-center">
+                <p class="mb-0">Tous droits réservés &copy; 2023</p>
+            </div>
+        </footer>
+    </body>
+</html>
