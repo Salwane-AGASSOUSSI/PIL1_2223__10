@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
-
-class TimeappConfig(AppConfig):
+class MyAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'timeapp'
+    name = 'App'
+    verbose_name = 'Application'
