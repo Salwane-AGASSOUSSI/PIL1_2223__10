@@ -1,0 +1,87 @@
+body{
+    background-color: rgb(182, 115, 27);
+    margin: 60px;
+    
+}
+.contain{
+    
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    
+}
+  
+form{
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-size: cover;
+}
+h1{
+    width: 36%;
+    margin:auto;
+    font-size: 20px;
+}
+input[type=text]{
+    width: 100%;
+    background-color: wheat;
+    color: black;
+    padding: 8px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 15%;
+}
+input[type=number]{
+    width: 100%;
+    background-color: wheat;
+    cursor: pointer;
+    color: black;
+    border-radius: 20%;
+    padding: 6px;
+}
+input[type=submit]{
+    background-color:rgb(255,255,255,0);
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    padding: auto;
+    border-radius: 20%;
+    width: 100%;
+}
+h2{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+select{
+    background-color: wheat;
+    width: 100%;
+    color: black;
+    border-radius: 17%;
+    padding: 6px;
+}
+input[type=email]{
+  
+    width: 100%;
+    background-color: wheat;
+    color: black;
+    border-radius: 20%;
+    padding: 6px;
+    cursor: pointer;
+}
+input[type=reset]{
+    background-color: rgb(255,255,255,0);
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    padding: auto;
+    border-radius: 27%;
+    width: 90%;
+    margin-left: 10px;
+}
+.value{
+    display: flex;
+}
