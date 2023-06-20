@@ -15,3 +15,4 @@ class EmploiTemps(models.Model):
     salle = models.CharField(max_length=50)  # Salle de cours
     enseignant = models.CharField(max_length=100)  # Nom de l'enseignant
     groupe = models.CharField(max_length=50)  # Groupe d'étudiants
+    pdf_file = models.FileField(upload_to='emplois_du_temps/', blank=True, null=True)
