@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: rgb(231, 199, 111);
+}
+.lg{
+    height: 400px;
+    width:  400px;
+    margin-left: 400px;
+    margin-top:0px;
+}
+.pform{
+    font-size: 40px;
+    text-align:center ;
+    font-weight: bold;
+}
+.formu{
+    background-color: rgb(201, 112, 28);
+    margin:  auto;
+    width: fit-content;    
+    padding: 20px;
+    padding-right: 225px;
+    padding-left: 125px;
+    color: black;
+    padding-top: 80px;
+    border: 5px solid;
+    border-color: rgb(21, 107, 39);
+}
+.line{
+    font-size: 35px;
+    text-align: center;
+}
+.formu input[type="text"],
+.formu input[type="email"],
+.formu input[type="submit"],
+.formu input[type="password"],
+.formu select {
+    background-color: white;
+    color: black;
+    width: 150%;
+    padding: 10px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    border: solid 3px;
+    border-color: rgb(21, 21, 182);
+    border-radius: 5px;
+}
+.formu input[type="submit"] {
+    border-color: rgb(190, 22, 22);
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin: 10px;
+}
+.hori1 {
+    border-color:rgb(21, 107, 39);
+} 
+.hori2{
+    border-color:  rgb(190, 22, 22);
+}
+.but1,.but2,.but3{
+    font-size: 70px;
+    font-style: italic;  
+    font-weight: bold; 
+    border: solid 1px;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.but1{
+    font-style: normal;
+}
+.circ1 a,.circ2 a,.circ3 a{
+    text-decoration: none; 
+    
+}
+.on1{
+    float: left;
+    margin-left: 100px;
+}
+.on2{
+    float: right;
+}
+.on3{
+     clear: both;
+    margin-top: 50px;
+}
+    </style>
+</head>
+<body>
+    <img src="D:\Vald's_front\Assets\IMGs\logoifri.png" alt="IFRI" class="lg">
+    <p class="pform">Connectez-vous</p>
+    <div class="formu">
+    <form action="/process-form" method="post">
+        <select name="status" id="status">
+            <option value="admin">Etudiant</option>
+            <option value="prof">Professeur</option>
+            <option value="etud">Administration</option>
+        </select><br>
+        <input type="text" id="Noms" name="Noms" placeholder="Nom et prénoms" required><br>
+        <input type="email" id="email" name="email" placeholder="Email " required><br>
+        <input type="password" id="password" name="password" placeholder="Code-status" required><br>
+        <input type="submit" value="Se connecter">
+    </form>
+    </div>
+    <footer>
+        <p>Tenth team designed by ,IFRI &copy; 2023</p>
+    </footer>
+</body>
+</html>
