@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation</title>
+    <style>
+        /* Styles pour le conteneur du pop-up */
+        .popup-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Styles pour le titre du pop-up */
+        .popup-container h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0 0 10px;
+        }
+        
+        /* Styles pour le paragraphe du pop-up */
+        .popup-container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        /* Styles pour le lien de retour */
+        .popup-container a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container">
+        <h1>Message de confirmation</h1>
+        <p>Votre emploi du temps a été enregistré avec succès.</p>
+        <a href="{% url 'acceuil_admin'%}">Retour à l'accueil</a>
+    </div>
+</body>
+</html>

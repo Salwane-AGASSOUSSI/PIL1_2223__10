@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de l'emploi du temps</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            width: 100%;
+            color: #fff;
+            background-color: #333;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            background-color: #666;
+            color: #fff ;
+        }
+
+        #add-row-btn, #delete-row-btn, #save-btn {
+            margin-top: 10px;
+        }
+    </style>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<header class="bg-dark text-white py-3">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'logo.png' %}" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="{% url 'acceuil_admin'%}" style="color: #ccc;">Acceuil</a></li>
+                <li><a href="{% url 'emploi_previews'%}" style="color: #ccc;">Emplois du temps</a></li>
+                <li><a href="{% url 'notif_admin'%}" style="color: #ccc;">Envoyer une notification</a></li>
+                <li><a href="{% url 'login'%}" style="color: #ccc;">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section id="timetable-creation">
+    <div class="container">
+        <h2>Modifier l'emploi du temps</h2>
+        <table>
+            <thead>
+            <tr>
+                <th colspan="3">Spécialité</th>
+                <th colspan="3">Niveau d'étude</th>
+                <th colspan="3">Numéro de la semaine</th>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="text" name="specialite"></td>
+                <td colspan="3">
+                    <select name="niveau" class="input-field">
+                        <option value="">Sélectionner un niveau d'étude</option>
+                        <option value="Licence">Licence 1</option>
+                        <option value="Licence">Licence 2</option>
+                        <option value="Licence">Licence 3</option>
+                        <option value="Master">Master 1</option>
+                        <option value="Master">Master 2</option>
+                        <option value="Doctorat">Doctorat</option>
+                        <!-- Ajoutez d'autres options ici -->
+                    </select>
+                <td colspan="3"><input type="text" name="semaine"></td>
+            </tr>
+            <tr>
+                <th>Jour</th>
+                <th>Intitulé du cours</th>
+                <th>Nom du professeur</th>
+                <th>Matériel nécessaire</th>
+                <th>Créneau horaire</th>
+                <th>Informations supplémentaires</th>
+            </tr>
+            </thead>
+            <tbody id="table-body">
+            <tr>
+                <td><input type="text" name="jour[]" class="input-field"></td>
+                <td><input type="text" name="intitule[]" class="input-field"></td>
+                <td><input type="text" name="professeur[]" class="input-field"></td>
+                <td><input type="text" name="materiel[]" class="input-field"></td>
+                <td><input type="text" name="creneau[]" class="input-field"></td>
+                <td><input type="text" name="infos[]" class="input-field"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button type="button" id="add-row-btn" style="background-color: #333;">Ajouter une ligne</button>
+        <button type="button" id="delete-row-btn"style="background-color: #333;">Supprimer la dernière ligne</button>
+        <button type="button" id="save-btn"style="background-color: #333;" >Enregistrer</button>
+    </div>
+
+    <script>
+        document.getElementById('add-row-btn').addEventListener('click', function() {
+            var tableBody = document.getElementById('table-body');
+            var newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+          <td><input type="text" name="jour[]" class="input-field"></td>
+          <td><input type="text" name="intitule[]" class="input-field"></td>
+          <td><input type="text" name="professeur[]" class="input-field"></td>
+          <td><input type="text" name="materiel[]" class="input-field"></td>
+          <td><input type="text" name="creneau[]" class="input-field"></td>
+          <td><input type="text" name="infos[]" class="input-field"></td>
+        `;
+
+            tableBody.appendChild(newRow);
+        });
+
+        document.getElementById('delete-row-btn').addEventListener('click', function() {
+            var tableBody = document.getElementById('table-body');
+            var rows = tableBody.getElementsByTagName('tr');
+            var numRows = rows.length;
+
+            if (numRows > 1) {
+                tableBody.removeChild(rows[numRows - 1]);
+            }
+        });
+
+        document.getElementById('save-btn').addEventListener('click', function() {
+            // Logique d'enregistrement des données ici
+            alert('Données enregistrées avec succès!');
+        });
+    </script>
+</section>
+</body>
+</html>

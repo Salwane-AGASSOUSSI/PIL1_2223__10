@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        body {
+            padding-top: 60px;
+            background-color: rgba(169, 169, 169, 0.3); /* Gris transparent pour le fond */
+            color: #808080; /* Couleur grise pour le texte */
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: transparent; /* Fond transparent pour l'en-tête */
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        .menu li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        #search {
+            background-color: transparent; /* Fond transparent pour la section de recherche */
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        #timetables {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .card-title {
+            margin-bottom: 20px;
+            color: #000; /* Couleur noire pour les titres de carte */
+        }
+        
+        footer {
+            background-color: transparent; /* Fond transparent pour le pied de page */
+            color: #808080; /* Couleur grise pour le texte du pied de page */
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        /* Styles pour les éléments avec fond gris transparent */
+        input[type="text"].form-control,
+        .card.mb-4 {
+            background-color: rgba(169, 169, 169, 0.3); /* Gris transparent pour les champs et les cartes */
+            color: #808080; /* Couleur grise pour le texte des champs et des cartes */
+        }
+        
+        /* Styles pour les boutons */
+        .btn-primary {
+            background-color: #007bff; /* Couleur bleue pour les boutons */
+            border-color: #007bff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0069d9; /* Couleur bleue foncée au survol des boutons */
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="logo.png" alt="Logo">
+                </div>
+                <ul class="menu">
+                    <li><a href="{% url 'acceuil'%}" style="color: #808080;">Acceuil</a></li>
+                    <li><a href="{% url 'emplois_previews_etu' %}" style="color: #808080;">Emplois du temps</a></li>
+                    <li><a href="{% url 'notif_etu'%}" style="color: #808080;">Notifications</a></li>
+                    <li><a href="{% url 'login'%}" style="color: #808080;">Déconnexion</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section id="search" class="py-5">
+        <div class="container">
+            <h2 class="mb-3">Rechercher un emploi du temps</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Rechercher l'emploi du temps de la semaine du....">
+                </div>
+                <button type="submit" class="btn btn-primary">Rechercher</button>
+            </form>
+        </div>
+    </section>
+    
+    <section id="timetables" class="bg-light py-5">
+        <div class="container">
+            <h2 class="mb-3">Emplois du temps</h2>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Spécialité :</h3>
+                    <h3 class="card-title">Année de :</h3>
+                    <h3 class="card-title">Semaine du :</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Jour</th>
+                                <th scope="col">Cours</th>
+                                <th scope="col">Enseignant(s)</th>
+                                <th scope="col">Salle</th>
+                                <th scope="col">Créneau Horaire</th>
+                                <th scope="col">Matériel nécessaire</th>
+                                <th scope="col">Informations supplémentaires</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-primary">Télécharger le PDF</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p class="mb-0">Tous droits réservés &copy; 2023</p>
+        </div>
+    </footer>
+</body>
+</html>

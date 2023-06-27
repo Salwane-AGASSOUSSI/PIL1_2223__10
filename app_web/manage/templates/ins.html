@@ -1,0 +1,15 @@
+<!-- inscription.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enregistrer</button>
+    </form>
+</body>
+</html>
