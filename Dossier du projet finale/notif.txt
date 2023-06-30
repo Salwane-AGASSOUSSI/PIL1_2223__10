@@ -1,0 +1,5 @@
+le superutilisateurs est utilisé comme administrateur avec les champs 
+username=ifri
+password= 141619
+
+les infoormations sur le compte email de l'application se trouve dans le fichiers infos.py 
