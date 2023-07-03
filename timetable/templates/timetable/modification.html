@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/modification.css' %}">
+</head>
+<body>
+
+  
+  <header>
+    <h2> {{ user.username }} </h2>
+    {% if user.is_superuser %}
+    
+     <nav> 
+   <div>
+     
+   <a href="{% url 'creer' %}"> new timetable </a>
+   <a href="{% url 'gestions' %}"> users gestion</a>
+   <a href="{% url 'account_requests' %}"> validation de compte </a>
+   {% endif %}
+   <a href="{% url 'consultation' %}"> dashboard </a>
+   <a href="{% url 'logout' %}"> deconnexion </a>
+
+   
+   
+   </div>
+  </nav>
+  </header><br><br>
+
+<main>
+    <form method="POST" >
+        {% csrf_token %}
+        
+        <table>
+          <tr>
+            <th><input type="text" name="filiere" placeholder="Filière" value="{{emploi_data.filiere}}" >
+            
+            <th>Lundi</th>
+            <th>Mardi</th>
+            <th>Mercredi</th>
+            <th>Jeudi</th>
+            <th>Vendredi</th>
+            <th>Samedi</th>
+          </tr>
+          <tr>
+            <td>7h - 8h</td>
+            <td><input type="text" name="l_7_8" value="{{ emploi_data.l_7_8 }}"></td>
+            <td><input type="text" name="m_7_8" value="{{ emploi_data.m_7_8 }}"></td>
+            <td><input type="text" name="me_7_8" value="{{ emploi_data.me_7_8 }}"></td>
+            <td><input type="text" name="j_7_8" value="{{ emploi_data.j_7_8 }}"></td>
+            <td><input type="text" name="v_7_8" value="{{ emploi_data.v_7_8 }}"></td>
+            <td><input type="text" name="s_7_8" value="{{ emploi_data.s_7_8 }}"></td>
+          </tr>
+          <tr>
+            <td>8h - 9h</td>
+            <td><input type="text" name="l_8_9" value="{{ emploi_data.l_8_9 }}"></td>
+            <td><input type="text" name="m_8_9" value="{{ emploi_data.m_8_9 }}"></td>
+            <td><input type="text" name="me_8_9" value="{{ emploi_data.me_8_9 }}"></td>
+            <td><input type="text" name="j_8_9" value="{{ emploi_data.j_8_9 }}"></td>
+            <td><input type="text" name="v_8_9" value="{{ emploi_data.v_8_9 }}"></td>
+            <td><input type="text" name="s_8_9" value="{{ emploi_data.s_8_9 }}"></td>
+          </tr>
+          <tr>
+            <td>9h - 10h</td>
+            <td><input type="text" name="l_9_10" value="{{ emploi_data.l_9_10 }}"></td>
+            <td><input type="text" name="m_9_10" value="{{ emploi_data.m_9_10 }}"></td>
+            <td><input type="text" name="me_9_10" value="{{ emploi_data.me_9_10 }}"></td>
+            <td><input type="text" name="j_9_10" value="{{ emploi_data.j_9_10 }}"></td>
+            <td><input type="text" name="v_9_10" value="{{ emploi_data.v_9_10 }}"></td>
+            <td><input type="text" name="s_9_10" value="{{ emploi_data.s_9_10 }}"></td>
+          </tr>
+          <tr>
+            <td>10h - 11h</td>
+            <td><input type="text" name="l_10_11" value="{{ emploi_data.l_10_11 }}"></td>
+            <td><input type="text" name="m_10_11" value="{{ emploi_data.m_10_11 }}"></td>
+            <td><input type="text" name="me_10_11" value="{{ emploi_data.me_10_11 }}"></td>
+            <td><input type="text" name="j_10_11" value="{{ emploi_data.j_10_11 }}"></td>
+            <td><input type="text" name="v_10_11" value="{{ emploi_data.v_10_11 }}"></td>
+            <td><input type="text" name="s_10_11" value="{{ emploi_data.s_10_11 }}"></td>
+          </tr>
+          <!-- Compléter le reste du tableau avec les autres plages horaires -->
+          <tr>
+            <td>11h - 12h</td>
+            <td><input type="text" name="l_11_12" value="{{ emploi_data.l_11_12 }}"></td>
+            <td><input type="text" name="m_11_12" value="{{ emploi_data.m_11_12 }}"></td>
+            <td><input type="text" name="me_11_12" value="{{ emploi_data.me_11_12 }}"></td>
+            <td><input type="text" name="j_11_12" value="{{ emploi_data.j_11_12 }}"></td>
+            <td><input type="text" name="v_11_12" value="{{ emploi_data.v_11_12 }}"></td>
+            <td><input type="text" name="s_11_12" value="{{ emploi_data.s_11_12 }}"></td>
+          </tr>
+          <tr>
+            <td>12h - 13h</td>
+            <td><input type="text" name="l_12_13" value="{{ emploi_data.l_12_13 }}"></td>
+            <td><input type="text" name="m_12_13" value="{{ emploi_data.m_12_13 }}"></td>
+            <td><input type="text" name="me_12_13" value="{{ emploi_data.me_12_13 }}"></td>
+            <td><input type="text" name="j_12_13" value="{{ emploi_data.j_12_13 }}"></td>
+            <td><input type="text" name="v_12_13" value="{{ emploi_data.v_12_13 }}"></td>
+            <td><input type="text" name="s_12_13" value="{{ emploi_data.s_12_13 }}"></td>
+          </tr>
+          <tr>
+            <td>13h - 14h</td>
+            <td><input type="text" name="l_13_14" value="{{ emploi_data.l_13_14 }}"></td>
+            <td><input type="text" name="m_13_14" value="{{ emploi_data.m_13_14 }}"></td>
+            <td><input type="text" name="me_13_14" value="{{ emploi_data.me_13_14 }}"></td>
+            <td><input type="text" name="j_13_14" value="{{ emploi_data.j_13_14 }}"></td>
+            <td><input type="text" name="v_13_14" value="{{ emploi_data.v_13_14 }}"></td>
+            <td><input type="text" name="s_13_14" value="{{ emploi_data.s_13_14 }}"></td>
+          </tr>
+          <tr>
+            <td>14h - 15h</td>
+            <td><input type="text" name="l_14_15" value="{{ emploi_data.l_14_15 }}"></td>
+            <td><input type="text" name="m_14_15" value="{{ emploi_data.m_14_15 }}"></td>
+            <td><input type="text" name="me_14_15" value="{{ emploi_data.me_14_15 }}"></td>
+            <td><input type="text" name="j_14_15" value="{{ emploi_data.j_14_15 }}"></td>
+            <td><input type="text" name="v_14_15" value="{{ emploi_data.v_14_15 }}"></td>
+            <td><input type="text" name="s_14_15" value="{{ emploi_data.s_14_15 }}"></td>
+          </tr>
+          <tr>
+            <td>15h - 16h</td>
+            <td><input type="text" name="l_15_16" value="{{ emploi_data.l_15_16 }}"></td>
+            <td><input type="text" name="m_15_16" value="{{ emploi_data.m_15_16 }}"></td>
+            <td><input type="text" name="me_15_16" value="{{ emploi_data.me_15_16 }}"></td>
+            <td><input type="text" name="j_15_16" value="{{ emploi_data.j_15_16 }}"></td>
+            <td><input type="text" name="v_15_16" value="{{ emploi_data.v_15_16 }}"></td>
+            <td><input type="text" name="s_15_16" value="{{ emploi_data.s_15_16 }}"></td>
+          </tr>
+          <tr>
+            <td>16h - 17h</td>
+            <td><input type="text" name="l_16_17" value="{{ emploi_data.l_16_17 }}"></td>
+            <td><input type="text" name="m_16_17" value="{{ emploi_data.m_16_17 }}"></td>
+            <td><input type="text" name="me_16_17" value="{{ emploi_data.me_16_17 }}"></td>
+            <td><input type="text" name="j_16_17" value="{{ emploi_data.j_16_17 }}"></td>
+            <td><input type="text" name="v_16_17" value="{{ emploi_data.v_16_17 }}"></td>
+            <td><input type="text" name="s_16_17" value="{{ emploi_data.s_16_17 }}"></td>
+          </tr>
+          <tr>
+            <td>17h - 18h</td>
+            <td><input type="text" name="l_17_18" value="{{ emploi_data.l_17_18 }}"></td>
+            <td><input type="text" name="m_17_18" value="{{ emploi_data.m_17_18 }}"></td>
+            <td><input type="text" name="me_17_18" value="{{ emploi_data.me_17_18 }}"></td>
+            <td><input type="text" name="j_17_18" value="{{ emploi_data.j_17_18 }}"></td>
+            <td><input type="text" name="v_17_18" value="{{ emploi_data.v_17_18 }}"></td>
+            <td><input type="text" name="s_17_18" value="{{ emploi_data.s_17_18 }}"></td>
+          </tr>
+          <tr>
+            <td>18h - 19h</td>
+            <td><input type="text" name="l_18_19" value="{{ emploi_data.l_18_19 }}"></td>
+            <td><input type="text" name="m_18_19" value="{{ emploi_data.m_18_19 }}"></td>
+            <td><input type="text" name="me_18_19" value="{{ emploi_data.me_18_19 }}"></td>
+            <td><input type="text" name="j_18_19" value="{{ emploi_data.j_18_19 }}"></td>
+            <td><input type="text" name="v_18_19" value="{{ emploi_data.v_18_19 }}"></td>
+            <td><input type="text" name="s_18_19" value="{{ emploi_data.s_18_19 }}"></td>
+          </tr>
+        </table>
+        
+        <button type="submit">Enregistrer</button><br><br>
+        
+        <a class="modif" href="{% url 'consultation' %}">Annuler</a><br><br>
+
+        <label for="description">Entrer des infos pour cette semaine:</label>
+
+    <textarea id="description" name="description" class="desc"  placeholder="vous pourrez entrer des infos sur les évènements de la semaine, les composition éventuelles et des infos sur les nouveau cours programmé "> {{ emploi_data.description }} </textarea>
+      </form>
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+  
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+</body>
+
+
+</html>

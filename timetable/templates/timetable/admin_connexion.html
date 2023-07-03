@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body>
+<main>
+  
+      <p>{{ message }}</p>
+      <form method="post" >
+          {{ form.as_p }}
+          {% csrf_token %}
+          <button type="submit" >Se connecter</button>
+      </form>
+
+
+</main>
+
+</body>
+
+
+
+</html>

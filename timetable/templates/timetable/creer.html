@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emploi du temps</title>
+  <link rel="stylesheet"  href="{% static 'css/creer.css' %}">
+</head>
+<body>
+
+  <header>
+    <h2> {{ user.username }} </h2>
+    {% if user.is_superuser %}
+    
+     <nav> 
+   <div>
+     
+   <a href="{% url 'creer' %}"> new timetable </a>
+   <a href="{% url 'gestions' %}"> users gestion</a>
+   <a href="{% url 'account_requests' %}"> validation de compte </a>
+   {% endif %}
+   <a href="{% url 'consultation' %}"> dashboard </a>
+   <a href="{% url 'logout' %}"> deconnexion </a>
+
+   
+   
+   </div>
+  </nav>
+  </header><br><br>
+  <main>
+  <form method="POST" action="{% url 'creer' %}">
+    {% csrf_token %}
+    <table>
+      <thead>
+        <tr>
+          <th><input type="text" name="filiere" placeholder="Filière">
+          </th>
+          <th>Lundi</th>
+          <th>Mardi</th>
+          <th>Mercredi</th>
+          <th>Jeudi</th>
+          <th>Vendredi</th>
+          <th>Samedi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ligne pour chaque heure -->
+        <tr>
+          <td>7h - 8h</td>
+          <td><input type="text" name="l_7_8"></td>
+          <td><input type="text" name="m_7_8"></td>
+          <td><input type="text" name="me_7_8"></td>
+          <td><input type="text" name="j_7_8"></td>
+          <td><input type="text" name="v_7_8"></td>
+          <td><input type="text" name="s_7_8"></td>
+        </tr>
+        <!-- Répétez les lignes ci-dessus pour chaque heure -->
+        <tr>
+          <td>8h - 9h</td>
+          <td><input type="text" name="l_8_9"></td>
+          <td><input type="text" name="m_8_9"></td>
+          <td><input type="text" name="me_8_9"></td>
+          <td><input type="text" name="j_8_9"></td>
+          <td><input type="text" name="v_8_9"></td>
+          <td><input type="text" name="s_8_9"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>9h - 10h</td>
+          <td><input type="text" name="l_9_10"></td>
+          <td><input type="text" name="m_9_10"></td>
+          <td><input type="text" name="me_9_10"></td>
+          <td><input type="text" name="j_9_10"></td>
+          <td><input type="text" name="v_9_10"></td>
+          <td><input type="text" name="s_9_10"></td>
+        </tr>
+        <!-- Répétez les lignes ci-dessus pour chaque heure -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>10h - 11h</td>
+          <td><input type="text" name="l_10_11"></td>
+          <td><input type="text" name="m_10_11"></td>
+          <td><input type="text" name="me_10_11"></td>
+          <td><input type="text" name="j_10_11"></td>
+          <td><input type="text" name="v_10_11"></td>
+          <td><input type="text" name="s_10_11"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>11h - 12h</td>
+          <td><input type="text" name="l_11_12"></td>
+          <td><input type="text" name="m_11_12"></td>
+          <td><input type="text" name="me_11_12"></td>
+          <td><input type="text" name="j_11_12"></td>
+          <td><input type="text" name="v_11_12"></td>
+          <td><input type="text" name="s_11_12"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>12h - 13h</td>
+          <td><input type="text" name="l_12_13"></td>
+          <td><input type="text" name="m_12_13"></td>
+          <td><input type="text" name="me_12_13"></td>
+          <td><input type="text" name="j_12_13"></td>
+          <td><input type="text" name="v_12_13"></td>
+          <td><input type="text" name="s_12_13"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>13h - 14h</td>
+          <td><input type="text" name="l_13_14"></td>
+          <td><input type="text" name="m_13_14"></td>
+          <td><input type="text" name="me_13_14"></td>
+          <td><input type="text" name="j_13_14"></td>
+          <td><input type="text" name="v_13_14"></td>
+          <td><input type="text" name="s_13_14"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>14h - 15h</td>
+          <td><input type="text" name="l_14_15"></td>
+          <td><input type="text" name="m_14_15"></td>
+          <td><input type="text" name="me_14_15"></td>
+          <td><input type="text" name="j_14_15"></td>
+          <td><input type="text" name="v_14_15"></td>
+          <td><input type="text" name="s_14_15"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>15h - 16h</td>
+          <td><input type="text" name="l_15_16"></td>
+          <td><input type="text" name="m_15_16"></td>
+          <td><input type="text" name="me_15_16"></td>
+          <td><input type="text" name="j_15_16"></td>
+          <td><input type="text" name="v_15_16"></td>
+          <td><input type="text" name="s_15_16"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>16h - 17h</td>
+          <td><input type="text" name="l_16_17"></td>
+          <td><input type="text" name="m_16_17"></td>
+          <td><input type="text" name="me_16_17"></td>
+          <td><input type="text" name="j_16_17"></td>
+          <td><input type="text" name="v_16_17"></td>
+          <td><input type="text" name="s_16_17"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>17h - 18h</td>
+          <td><input type="text" name="l_17_18"></td>
+          <td><input type="text" name="m_17_18"></td>
+          <td><input type="text" name="me_17_18"></td>
+          <td><input type="text" name="j_17_18"></td>
+          <td><input type="text" name="v_17_18"></td>
+          <td><input type="text" name="s_17_18"></td>
+        </tr>
+        <!-- Continuez avec les autres heures jusqu'à 19h -->
+        <tr>
+          <td>18h - 19h</td>
+          <td><input type="text" name="l_18_19"></td>
+          <td><input type="text" name="m_18_19"></td>
+          <td><input type="text" name="me_18_19"></td>
+          <td><input type="text" name="j_18_19"></td>
+          <td><input type="text" name="v_18_19"></td>
+          <td><input type="text" name="s_18_19"></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit">Enregistrer</button>
+    <label for="description">Entrer des infos pour cette semaine:</label>
+    <textarea id="description" name="description" class="desc"  placeholder="vous pourrez entrer des infos sur les évènements de la semaine, les composition éventuelles et des infos sur les nouveau cours programmé "></textarea>
+
+  </form>
+
+  
+  {% if message %}
+    <div class="error-message">
+    <p>{{ message }}</p>
+    </div>
+  {% endif %}
+</main>
+</body>
+</html>

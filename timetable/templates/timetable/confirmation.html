@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'css/confirmation.css' %}">
+
+</head>
+
+<body>
+
+  <header>
+    <h2> {{ user.username }} </h2>
+    {% if user.is_superuser %}
+    
+     <nav> 
+   <div>
+     
+   <a href="{% url 'creer' %}"> new timetable </a>
+   <a href="{% url 'gestions' %}"> users gestion</a>
+   <a href="{% url 'account_requests' %}"> validation de compte </a>
+   {% endif %}
+   <a href="{% url 'consultation' %}"> dashboard </a>
+   <a href="{% url 'logout' %}"> deconnexion </a>
+
+   
+   
+   </div>
+  </nav>
+  </header><br><br>
+
+
+<main>
+<h3> Voulez vous vraiment sauvegarder cet emploi du temps ? </h3>
+<form method="post">
+  {% csrf_token %}
+
+  <input type="submit" name="action" value="Valider">
+  <input type="submit" name="action" value="Annuler">
+
+</form>
+
+</main>
+
+
+</body>
+
+</html>

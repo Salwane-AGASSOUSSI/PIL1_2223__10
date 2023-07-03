@@ -1,0 +1,181 @@
+/* Style pour le conteneur du header */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style pour le titre */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  /* Style pour la navigation */
+  nav {
+    margin-top: 20px;
+  }
+  
+  /* Style pour les liens de navigation */
+  nav a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #555;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style pour le lien de déconnexion */
+  nav a:last-child {
+    background-color: #f00;
+  }
+  
+  /* Style pour les liens de navigation au survol */
+  nav a:hover {
+    background-color: #777;
+  }
+  
+  /* Style pour les liens de navigation actifs */
+  nav a.active {
+    background-color: #999;
+  }
+  
+  /* Style pour le conteneur des liens */
+  nav div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style pour l'effet de bordure en bas des liens */
+  nav a:before,
+  nav a:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  /* Animation de l'effet de bordure en bas des liens */
+  nav a:before {
+    transform: translateX(-50%);
+  }
+  
+  nav a:after {
+    transform: translateX(-50%) scaleX(0);
+  }
+  
+  nav a:hover:before,
+  nav a:hover:after {
+    width: 50%;
+  }
+  
+  /* Style pour le lien de déconnexion */
+  nav a:last-child:before,
+  nav a:last-child:after {
+    background-color: #f00;
+  }
+  
+  /* Style pour le lien de déconnexion au survol */
+  nav a:last-child:hover:before,
+  nav a:last-child:hover:after {
+    background-color: #d00;
+  }
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .desc {
+    width: 100%;
+    height: 100px;
+    resize: none; /* Empêche la redimension de la zone de texte */
+    border: 2px solid #333;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Style pour les jours de la semaine */
+  th:nth-child(n+2) {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+  }
+  
+  /* Style pour les heures */
+  tr:nth-child(n+2) td:first-child {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+  }
+  
+  /* Style pour les cellules non vides */
+  input[type="text"]:not(:placeholder-shown) {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+  
+
+  main {
+    margin: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .error-message {
+    color: #ff0000; /* Couleur rouge pour le message d'erreur */
+    font-weight: bold; /* Texte en gras */
+    font-size: 16px; /* Taille de police */
+    background-color: #ffecec; /* Fond de couleur claire */
+    padding: 10px; /* Espacement intérieur */
+    margin-top: 10px; /* Marge supérieure */
+    border: 1px solid #ff0000; /* Bordure rouge */
+  }
+  

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'csss/connexion.css' %}"> 
+
+</head>
+<body>
+<main>
+  
+      <p>{{ message }}</p>
+      <form method="post" >
+          {% csrf_token %}
+          {{ form.as_p }}
+          
+          <button type="submit" >Se connecter</button><br>mot de passe oublié ? 
+          <a href="{% url 'reset_password' %}"> Reset password </a><br>Vous n'avez pas de compte?....
+          <a href="{% url 'signup' %}"> Inscrivez vous maintenant </a>
+
+      </form>
+
+
+</main>
+
+</body>

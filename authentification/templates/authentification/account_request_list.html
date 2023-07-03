@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'csss/demande.css' %}">
+
+</head>
+<body>
+
+    <header>
+        <h2> {{ user.username }} </h2>
+        {% if user.is_superuser %}
+        
+         <nav> 
+       <div>
+         
+       <a href="{% url 'creer' %}"> new timetable </a>
+       <a href="{% url 'gestions' %}"> users gestion</a>
+       <a href="{% url 'account_requests' %}"> validation de compte </a>
+       {% endif %}
+       <a href="{% url 'consultation' %}"> dashboard </a>
+       <a href="{% url 'logout' %}"> deconnexion </a>
+    
+       
+       
+       </div>
+      </nav>
+      </header><br><br>
+    
+
+<main>
+
+<h2> Demande en attente </h2>
+
+    {% for request in account_requests %}
+    <p>{{ request.username }} - {{ request.email }}-{{ request.num_id}} </p>
+    <a href="{% url 'approve' pk=request.id %}">Approuver</a>
+    <a href="{% url 'refus' pk=request.id %}"> refuser </a>
+    {% endfor %}
+
+
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* Style pour le conteneur principal */
+main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le titre */
+h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style pour les demandes en attente */
+p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Style pour les liens d'approbation et de refus */
+a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #45a049;
+}
+
+/* Style pour le conteneur du header */
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour le titre */
+header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Style pour la navigation */
+nav {
+  margin-top: 20px;
+}
+
+/* Style pour les liens de navigation */
+nav a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #555;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+/* Style pour le lien de déconnexion */
+nav a:last-child {
+  background-color: #f00;
+}
+
+/* Style pour les liens de navigation au survol */
+nav a:hover {
+  background-color: #777;
+}
+
+/* Style pour les liens de navigation actifs */
+nav a.active {
+  background-color: #999;
+}
+
+/* Style pour le conteneur des liens */
+nav div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Style pour l'effet de bordure en bas des liens */
+nav a:before,
+nav a:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+/* Animation de l'effet de bordure en bas des liens */
+nav a:before {
+  transform: translateX(-50%);
+}
+
+nav a:after {
+  transform: translateX(-50%) scaleX(0);
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  width: 50%;
+}
+
+/* Style pour le lien de déconnexion */
+nav a:last-child:before,
+nav a:last-child:after {
+  background-color: #f00;
+}
+
+/* Style pour le lien de déconnexion au survol */
+nav a:last-child:hover:before,
+nav a:last-child:hover:after {
+  background-color: #d00;
+}

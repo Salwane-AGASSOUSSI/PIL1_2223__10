@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'csss/superuser.css' %}">
+
+</head>
+<body>
+
+    <header>
+        <h2> {{ user.username }} </h2>
+        {% if user.is_superuser %}
+        
+         <nav> 
+       <div>
+         
+       <a href="{% url 'creer' %}"> new timetable </a>
+       <a href="{% url 'gestions' %}"> users gestion</a>
+       <a href="{% url 'account_requests' %}"> validation de compte </a>
+       {% endif %}
+       <a href="{% url 'consultation' %}"> dashboard </a>
+       <a href="{% url 'logout' %}"> deconnexion </a>
+    
+       
+       
+       </div>
+      </nav>
+      </header><br><br>
+    
+
+
+<main>
+    <h3>tous les administrateurs</h3>
+    {% for superuser in superusers %}
+    <p>{{ superuser.username }}-{{ superuser.email }} <a href="{% url 'del' pk=superuser.id %}">Supprimer</a></p>
+    {% endfor %}<br>
+    <section>
+    <a href="{% url 'add' %}"> Ajouter un autre administrateur </a><br><br><br>
+    <a href="{% url 'consultation' %}"> Retour </a>
+    </section>
+
+
+</main>
+
+</body>
+</html>
