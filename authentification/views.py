@@ -57,11 +57,11 @@ def signup_page(request):
             
             return redirect('success')
     return render(request,'authentification/inscription.html',{'form':form})
-
+user_passes_test(is_superuser)
 def account_requests(request):
     account_requests = Account_Request.objects.filter(is_approved=False)
     return render(request, 'authentification/account_request_list.html', {'account_requests':account_requests})
-
+@user_passes_test(is_superuser)
 def approve_account_request(request,pk):
     account_request = Account_Request.objects.get(pk=pk)
     username = account_request.username
@@ -82,7 +82,7 @@ def approve_account_request(request,pk):
     send_mail(subject,message,from_email,recipient_list)
     messages.success(request, 'Demande de compte approuvée. Un e-mail a été envoyé au demandeur.')
     return redirect('account_requests')
-
+@user_passes_test(is_superuser)
 def refus(request,pk):
     
     try:

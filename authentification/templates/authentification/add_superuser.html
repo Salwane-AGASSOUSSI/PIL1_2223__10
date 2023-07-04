@@ -3,7 +3,7 @@
 <html>
 <head>
 
-
+<link rel="stylesheet" href="{% static 'csss/add_superuser.css' %}">
 </head>
 
 <body>
@@ -12,11 +12,13 @@
 
     <h2>Ajouter un superutilisateur</h2>
 
-    <form method="post">
+    <form method="post" class="form-container">
       {% csrf_token %}
+      <div class="form-fields">
       {{ form.as_p }}
+      </div>
     
-      <button type="submit">Ajouter</button>
+      <button type="submit" class="btn-submit">Ajouter</button>
     </form>
 
 
